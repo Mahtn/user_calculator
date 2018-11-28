@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <style>
+.div{
+    margin-left: 400px;
+    margin-top: 100px;
+    border-radius: 20px;
+    border-color: #999;
+    height: 450px;
+    width: 550px;
+    border:1px solid;
+    background-color:grey; 
+}
+.p{
+    font-family: sans-serif;
+    font-size: 28px;
+    color:white;
+    margin-left: 200px;
+    margin-top: 40px;
+    font-style: bold;
+}
+.label{
+    font-family: sans-serif;
+    font-size: 20px;
+    color:white;
+    margin-left: 60px;
+    font-style: bold;
+}
+.input1{
+    font-family: sans-serif;
+    border-radius: 5px;
+    border:1px solid;
+    font-size: 20px;
+    color:grey;
+    margin-left: 50px;
+    height: 25px;
+    width: 200px;
+}
+.input2{
+    font-family: sans-serif;
+    border-radius: 5px;
+    border:1px solid;
+    font-size: 20px;
+    color:grey;
+    margin-left: 20px;
+    height: 25px;
+    width: 200px;
+}
+.input3{
+    font-family: sans-serif;
+    border-radius: 5px;
+    border:1px solid;
+    font-size: 20px;
+    color:grey;
+    margin-left: 110px;
+    margin-top:-2px;
+    height: 25px;
+    width: 200px;
+}
+.button1{
+    font-family: sans-serif;
+    color: #ffffff;
+    background:url(img/menu_bgh.jpg);
+    background-repeat:repeat-x;
+    border-radius:8px;
+	-moz-border-radius:8px;
+    margin-left:155px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border:1px solid;
+    font-size: 22px;
+    margin-left: 70px;
+    height: 35px;
+    width: 60px;
+}
+.button1:hover{
+    background:url(img/menu_bg.jpg);
+}
+
+.button2{
+    font-family: sans-serif;
+    color: #ffffff;
+    background:url(img/menu_bgh.jpg);
+    background-repeat:repeat-x;
+    border-radius:8px;
+	-moz-border-radius:8px;
+    margin-left:155px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border:1px solid;
+    font-size: 22px;
+    margin-left: 40px;
+    height: 35px;
+    width: 60px;
+}
+.button2:hover{
+    background:url(img/menu_bg.jpg);
+}
+
+.button3{
+    font-family: sans-serif;
+    color: #ffffff;
+    background:url(img/menu_bgh.jpg);
+    background-repeat:repeat-x;
+    border-radius:8px;
+	-moz-border-radius:8px;
+    margin-left:155px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border:1px solid;
+    font-size: 22px;
+    margin-left: 40px;
+    height: 35px;
+    width: 60px;
+}
+.button3:hover{
+    background:url(img/menu_bg.jpg);
+}
+
+.button4{
+    font-family: sans-serif;
+    color: #ffffff;
+    background:url(img/menu_bgh.jpg);
+    background-repeat:repeat-x;
+    border-radius:8px;
+	-moz-border-radius:8px;
+    margin-left:135px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border:1px solid;
+    font-size: 22px;
+    margin-left: 40px;
+    height: 35px;
+    width: 60px;
+}
+.button4:hover{
+    background:url(img/menu_bg.jpg);
+}
+.button5{
+    font-family: sans-serif;
+    color: #ffffff;
+    background:url(img/menu_bg.jpg);
+    background-repeat:repeat-x;
+    border-radius:8px;
+	-moz-border-radius:8px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border:1px solid;
+    font-size: 22px;
+    margin-left: 230px;
+    height: 35px;
+    width: 100px;
+}
+.button5:hover{
+    background:url(img/menu_bgh.jpg);
+}
+
+</style>
+    <script language="javascript">
+        function adds(){
+            document.calc.res.value ="";
+            if(document.calc.num1.value == ""){
+                alert("Please enter a number.");
+                document.calc.num1.focus();
+                return false();
+            }
+            if(isNaN(document.calc.num1.value)){
+                alert("Please enter a number.");
+                document.calc.num1.focus();
+                return false();
+            }
+            if(document.calc.num2.value == ""){
+                alert("Please enter a number.");
+                document.calc.num2.focus();
+                return false();
+            }
+            if(isNaN(document.calc.num2.value)){
+                alert("Please enter a number.");
+                document.calc.num2.focus();
+                return false();
+            }
+            var num1, num2, res;
+            num1 = parseInt(document.calc.num1.value);
+            num2 = parseInt(document.calc.num2.value);
+            res = num1+num2;
+            document.calc.res.value = res;
+        }
+        
+        function multiply(){
+            document.calc.res.value ="";
+            if(document.calc.num1.value == ""){
+                alert("Please enter a number.");
+                document.calc.num1.focus();
+                return false();
+            }
+            if(isNaN(document.calc.num1.value)){
+                alert("Please enter a number.");
+                document.calc.num1.focus();
+                return false();
+            }
+            if(document.calc.num2.value == ""){
+                alert("Please enter a number.");
+                document.calc.num2.focus();
+                return false();
+            }
+            if(isNaN(document.calc.num2.value)){
+                alert("Please enter a number.");
+                document.calc.num2.focus();
+                return false();
+            }
+            var num1, num2, res;
+            num1 = parseInt(document.calc.num1.value);
+            num2 = parseInt(document.calc.num2.value);
+            res = num1*num2;
+            document.calc.res.value = res;
+        }
+        
+        
+        function mins(){
+            document.calc.res.value ="";
+            if(document.calc.num1.value == ""){
+                alert("Please enter a number.");
+                document.calc.num1.focus();
+                return false();
+            }
+            if(isNaN(document.calc.num1.value)){
+                alert("Please enter a number.");
+                document.calc.num1.focus();
+                return false();
+            }
+            if(document.calc.num2.value == ""){
+                alert("Please enter a number.");
+                document.calc.num2.focus();
+                return false();
+            }
+            if(isNaN(document.calc.num2.value)){
+                alert("Please enter a number.");
+                document.calc.num2.focus();
+                return false();
+            }
+            var num1, num2, res;
+            num1 = parseInt(document.calc.num1.value);
+            num2 = parseInt(document.calc.num2.value);
+            res = num1-num2;
+            document.calc.res.value = res;
+        }
+        
+        function divid(){
+            document.calc.res.value ="";
+            if(document.calc.num1.value == ""){
+                alert("Please enter a number.");
+                document.calc.num1.focus();
+                return false();
+            }
+            if(isNaN(document.calc.num1.value)){
+                alert("Please enter a number.");
+                document.calc.num1.focus();
+                return false();
+            }
+            if(document.calc.num2.value == ""){
+                alert("Please enter a number.");
+                document.calc.num2.focus();
+                return false();
+            }
+            if(isNaN(document.calc.num2.value)){
+                alert("Please enter a number.");
+                document.calc.num2.focus();
+                return false();
+            }
+            var num1, num2, res;
+            num1 = parseInt(document.calc.num1.value);
+            num2 = parseInt(document.calc.num2.value);
+            res = num1/num2;
+            document.calc.res.value = res;
+        }
+         function newFunction() {
+            document.getElementById("newForm").reset();
+         }
+    </script>  
+</head>
+  <body>
+      <div class="row">
+          <div class="col-sm-6">
+                    <form  class="div" name="calc" method="post" action="" id="newForm">
+
+                                <p class="p">Calculator</p>
+                                <div class="row">
+                                       <table>
+                                               <tr>
+                                                  <td><div class="col-sm-6"><p class="label">First Number</p></div></td>
+                                                  <td><div class="col-sm-6"><input class="input1" type="text" name="num1" maxlength="8"  /></div></td>
+                                              </tr>
+                                       </table>
+                                </div>
+                                
+                                <div class="row">
+                                        <table>
+                                                <tr>
+                                                    <td><div class="col-sm-6"><p class="label">Second Number</p></div></td>
+                                                    <td><div class="col-sm-6"><input  class="input2" type="text" name="num2" maxlength="8" /></div></td>
+                                                </tr>
+                                        </table>
+                                </div>
+
+                                <div class="row">
+                                        <table>
+                                                <tr>
+                                                    <td><div class="col-sm-6"><p class="label">Result</p></div></td>
+                                                    <td><div class="col-sm-6"><input class="input3" type="text" name="res" readonly="readonly" /></div></td>
+                                                </tr>
+                                        </table>
+                                </div>
+
+                                <div class="row">
+                                        <table>
+                                                <tr>
+                                                    <td><div class="col-sm-3"><input class="button1" type="button" name="send" value="+" onclick="return adds();" /></div></td>
+                                                    <td><div class="col-sm-3"><input class="button2" type="button" name="send" value="*" onclick="return multiply();" /></div></td>
+                                                    <td><div class="col-sm-3"><input class="button3" type="button" name="send" value="-" onclick="return mins();" /></div></td>
+                                                    <td><div class="col-sm-3"><input class="button4" type="button" name="send" value="/" onclick="return divid();" /></div>	</td>
+                                                </tr>
+                                        </table>
+                                </div>
+
+                                <div class="row">
+                                    <table>
+                                            <tr>
+                                                <td><div><input class="button5" type="button" onclick="newFunction()" value="Clear"></div></td>
+                                            </tr>
+                                    </table>
+                            </div>
+
+                    </FORM>
+          </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  </body>
+</html>
